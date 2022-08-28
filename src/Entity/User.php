@@ -6,7 +6,10 @@ use ApiPlatform\Core\Annotation\ApiResource;
 use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
 /**
- * @ApiResource()
+ * @ApiResource(
+ *      formats = {"Json"}
+ *      itemOperations={"get", "put", "delete"}
+ * )
  * @ORM\Entity(repositoryClass=UserRepository::class)
  */
 class User
